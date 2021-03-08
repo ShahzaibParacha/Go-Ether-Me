@@ -5,9 +5,9 @@ import "../App.css";
 export default class Home extends Component {
   render() {
     return (
-      <div className="Home-header">
-           <img src={logo} className="home-logo" alt="logo" />
-      </div>
+      <body>
+           <img src={logo} className="logo" alt="logo" height="100%"/>
+      </body>
     );
   }
 }
