@@ -1,3 +1,3 @@
 ![](./src/lo.png)
 
-## A decentralized crowdfunding web app based on the Ethereum Network0
+## A decentralized crowdfunding web app based on the Ethereum Network
