@@ -21,12 +21,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
-        <Route exact path="/projects" render={(props) => <Projects {...props} />} />
-        <Route 
-        exact
-        path ="/project:projectID"
-        render={(props) => <Project {...props} />}     
-        />
+        <Route path="/projects" exact component={Projects} />
+        <Route path="/project/:id" component={Project} />
         <Route path="/404" exact component={Error} />
         <Redirect to="/404" />
       </Switch>
@@ -35,3 +31,10 @@ function App() {
 }
 
 export default App;
+
+        // {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} />
+        // {/* <Route 
+        // exact
+        // path ="/:projectName"
+        // render={(props) => <Project {...props} />}     
+        // /> */} */}
