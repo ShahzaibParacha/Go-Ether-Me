@@ -78,14 +78,7 @@ contract Project {
         msg.sender.transfer(balance);
     }
     
-    function getDetails() public view returns ( 
-    address _creator,
-    uint _goal,
-    uint _balance,
-    uint _pledged,
-    uint _beleivers,
-    string memory _name
-    )
+    function getCurrentStatus() public view returns (address _creator, uint _goal, uint _balance, uint _pledged, uint _beleivers, string memory _name)
     {
     _creator = creator;
     _goal = goal;
