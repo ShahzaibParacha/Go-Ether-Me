@@ -1,8 +1,10 @@
 import React from "react";
 import logo from "../lo.png";
 import "../App.css";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
+  var history = useHistory();
   var name: any;
   var password: any;
   const handleChangeOne = (e: any) => {
@@ -17,6 +19,8 @@ const Home = () => {
   const handleDonation = (e: any) => {
     e.preventDefault();
     console.log(name, password); //here we will link to the smart contract transactory function
+    history.push('/projects');
+
   };
 
   const Login = (props: any) => (
@@ -72,10 +76,13 @@ const Home = () => {
     </div>
   );
 
+  setTimeout(function() {
+    window.location.replace('/projects');
+  }, 5000);
+
   return (
     <div className="loginbody">
       <img src={logo} alt="logo" />
-      {login}
     </div>
   );
 };

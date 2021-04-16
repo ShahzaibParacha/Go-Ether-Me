@@ -19,7 +19,7 @@ export default class Navbar extends Component {
             <a href="/Projects">Projects</a>
           </li>
           <li>
-            <a href="Login">Login</a>
+            <a href="/New">Create</a>
           </li>
         </ul>
       </nav>

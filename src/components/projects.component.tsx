@@ -10,21 +10,19 @@ function Projects() {
   const [items, setItems] = useState([]);
 
   async function fetchItems() {
-    const allProjects = await fetch("http://localhost:5000/projects");
+    const allProjects = await fetch("http://localhost:4000/projects");
     const items = await allProjects.json();
-    console.log(items);
     setItems(items.allProjects);
   }
 
   function displayCard(item: any) {
     return (
-      <Link to={`/project/${item["ID"]}`}>
+      <Link to={`/project/${item["id"]}`}>
         <div className="card">
           <div className="card-image"></div>
           <div className="card-text">
-            <span className="date">{item['main_category']}</span>
-            <h2>{item["name"]}</h2>
-            <p>{item["vision"]}</p>
+            <span className="date">{item['category']}</span>
+            <h2>{item["projectName"]}</h2>
           </div>
           <div className="card-stats">
             <div className="stat">
@@ -36,7 +34,7 @@ function Projects() {
               <div className="type">Amassed</div>
             </div>
             <div className="stat">
-              <div className="value">{item["backers"]}</div>
+              <div className="value">{item["beleivers"]}</div>
               <div className="type">Beleivers</div>
             </div>
           </div>
